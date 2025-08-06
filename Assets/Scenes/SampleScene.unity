@@ -1041,6 +1041,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 501295248943222296, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1269055967}
+    - targetCorrespondingSourceObject: {fileID: 501295248943222296, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1269055968}
   m_SourcePrefab: {fileID: 100100000, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
 --- !u!1 &1269055966 stripped
 GameObject:
@@ -1068,6 +1071,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &1269055968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269055966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf50b0006af98a544b94a2706149c1f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  damageRate: 1
 --- !u!1 &1316145685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20436b3be544af4c95de29cfa490b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiCondition: {fileID: 532633072}
+  uiCondition: {fileID: 0}
   noHungerHealthDecay: 5
 --- !u!1 &1417828457
 GameObject:
@@ -1382,8 +1399,9 @@ GameObject:
   - component: {fileID: 1417828458}
   - component: {fileID: 1417828460}
   - component: {fileID: 1417828459}
+  - component: {fileID: 1417828461}
   m_Layer: 5
-  m_Name: Damaged
+  m_Name: DamageIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1446,6 +1464,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417828457}
   m_CullTransparentMesh: 1
+--- !u!114 &1417828461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417828457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23085dba4e457542b03897f9c3248b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  flashSpeed: 0.5
 --- !u!1 &1447962440
 GameObject:
   m_ObjectHideFlags: 0
