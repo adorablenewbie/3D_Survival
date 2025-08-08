@@ -42,6 +42,15 @@ public class PlayerCondition : MonoBehaviour, IDamagable
     {
         hunger.Add(amount);
     }
+    public bool UseStamina(float amount)
+    {
+        if (stamina.curValue - amount < 0)
+        {
+            return false;
+        }
+        stamina.Subtract(amount);
+        return true;
+    }
 
     public void Die()
     {
