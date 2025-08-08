@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public ItemData itemData;
     public Action addItem;
 
+    public Equipment equip;
+
     public Transform dropPosition;
 
     private void Awake()
@@ -18,5 +20,6 @@ public class Player : MonoBehaviour
         CharacterManager.Instance.Player = this;
         controller = GetComponent<PlayerController>();
         condition = GetComponent<PlayerCondition>();
+        equip = GetComponent<Equipment>();
     }
 }
